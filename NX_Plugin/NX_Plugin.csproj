@@ -32,16 +32,19 @@
   <ItemGroup>
     <Reference Include="NXOpen">
       <HintPath>D:\Siemens\NX 11.0\NXBIN\managed\NXOpen.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="NXOpen.UF">
       <HintPath>D:\Siemens\NX 11.0\NXBIN\managed\NXOpen.UF.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="NXOpen.Utilities">
       <HintPath>D:\Siemens\NX 11.0\NXBIN\managed\NXOpen.Utilities.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="NXOpenUI">
       <HintPath>D:\Siemens\NX 11.0\NXBIN\managed\NXOpenUI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
