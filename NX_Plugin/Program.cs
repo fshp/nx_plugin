@@ -50,18 +50,7 @@ namespace NX_Plugin
 
                 form.Show();
 
-                const double l = 50;
-                const double r = 5;
-                const double offset = 1;
-                const double angle = 45;
-                const double rp = r / 6;
-                const double h = 3;
-                //CreateModel(l, r, offset, angle, rp, h);
-
                 theProgram.Dispose();
-
-
-
             }
             catch (NXOpen.NXException ex)
             {
