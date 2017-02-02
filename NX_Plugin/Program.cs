@@ -2,6 +2,8 @@
 using NXOpen;
 using NXOpen.UF;
 using System.Collections;
+using System.Threading;
+using System.Globalization;
 
 namespace NX_Plugin
 {
@@ -58,15 +60,16 @@ namespace NX_Plugin
             return retValue;
         }
 
-        public static void CreateModel(double l, double r, double h, double w)
+        public static void CreateModel(double d, double l, double b, double h, double C)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
             Tag UFPart1;
             theUfSession.Part.New("model_ka", 1, out UFPart1);
 
             Tag cylinder;
             double[] point = { 0, 0, 0 };
             double[] direction = { 1, 0, 0 };
-            theUfSession.Modl.CreateCylinder(FeatureSigns.Nullsign, UFPart1, point, l.ToString(), (r * 2).ToString(), direction, out cylinder);
+            theUfSession.Modl.CreateCylinder(FeatureSigns.Nullsign, UFPart1, point, l.ToString(), d.ToString(), direction, out cylinder);
 
 
             Tag cyl_tag, obj_id_camf;
@@ -86,10 +89,11 @@ namespace NX_Plugin
             }
 
             Tag[] list = (Tag[])arr_list.ToArray(typeof(Tag));
-            theUfSession.Modl.CreateChamfer(3, "1", "1", "45", list, out obj_id_camf);
+            theUfSession.Modl.CreateChamfer(3, C.ToString(), C.ToString(), "45", list, out obj_id_camf);
 
             ////////////////////////////////
-
+            double r = d / 2;
+            double w = h / 2;
             double[] l1_endpt1 = { 0, -r, -w };
             double[] l1_endpt2 = { 0, r, -w };
             double[] l2_endpt1 = l1_endpt2;

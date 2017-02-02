@@ -23,5 +23,15 @@ namespace NX_Plugin
             this.boltTableAdapter.Fill(this.dbDataSet.bolt);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double d = (Double)((DataRowView)this.boltBindingSource.Current).Row["d"];
+            double l = (double)numericUpDown1.Value;
+            double b = (Double)((DataRowView)this.boltBindingSource.Current).Row["b"];
+            double h = (Double)((DataRowView)this.boltBindingSource.Current).Row["h"];
+            double C = (Double)((DataRowView)this.boltBindingSource.Current).Row["C"];
+            Program.CreateModel(d, l, b, h, C);
+        }
     }
 }
