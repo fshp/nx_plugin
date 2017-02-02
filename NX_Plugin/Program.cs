@@ -8,8 +8,6 @@ namespace NX_Plugin
     public class Program
     {
         // class members
-        private static Session theSession;
-        private static UI theUI;
         private static UFSession theUfSession;
         public static Program theProgram;
         public static bool isDisposeCalled;
@@ -21,8 +19,8 @@ namespace NX_Plugin
         {
             try
             {
-                theSession = Session.GetSession();
-                theUI = UI.GetUI();
+                //theSession = Session.GetSession();
+                //theUI = UI.GetUI();
                 theUfSession = UFSession.GetUFSession();
                 isDisposeCalled = false;
             }
