@@ -57,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 24);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 6;
@@ -66,38 +66,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 58);
+            this.label2.Location = new System.Drawing.Point(43, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(22, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "b";
+            this.label2.Text = "b =";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 84);
+            this.label3.Location = new System.Drawing.Point(43, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.Size = new System.Drawing.Size(22, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "h";
+            this.label3.Text = "h =";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 110);
+            this.label4.Location = new System.Drawing.Point(46, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(10, 13);
+            this.label4.Size = new System.Drawing.Size(19, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "r";
+            this.label4.Text = "r =";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 136);
+            this.label5.Location = new System.Drawing.Point(42, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 13);
+            this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 18;
-            this.label5.Text = "C";
+            this.label5.Text = "C =";
             // 
             // comboBox1
             // 
@@ -105,7 +105,7 @@
             this.comboBox1.DisplayMember = "type";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 20);
+            this.comboBox1.Location = new System.Drawing.Point(71, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
@@ -124,7 +124,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "b", true));
-            this.label6.Location = new System.Drawing.Point(132, 58);
+            this.label6.Location = new System.Drawing.Point(68, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 19;
@@ -134,7 +134,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "h", true));
-            this.label7.Location = new System.Drawing.Point(132, 84);
+            this.label7.Location = new System.Drawing.Point(68, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 20;
@@ -144,7 +144,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "r", true));
-            this.label8.Location = new System.Drawing.Point(132, 110);
+            this.label8.Location = new System.Drawing.Point(68, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 21;
@@ -154,7 +154,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "c", true));
-            this.label9.Location = new System.Drawing.Point(132, 136);
+            this.label9.Location = new System.Drawing.Point(68, 121);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 22;
@@ -163,11 +163,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(38, 165);
+            this.label10.Location = new System.Drawing.Point(47, 149);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(9, 13);
+            this.label10.Size = new System.Drawing.Size(18, 13);
             this.label10.TabIndex = 23;
-            this.label10.Text = "l";
+            this.label10.Text = "l =";
             // 
             // pictureBox1
             // 
@@ -197,7 +197,7 @@
             this.comboBox2.DisplayMember = "l";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(132, 157);
+            this.comboBox2.Location = new System.Drawing.Point(71, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 27;
