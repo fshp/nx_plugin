@@ -28,28 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dbDataSet = new NX_Plugin.dbDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.boltBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.boltTableAdapter = new NX_Plugin.dbDataSetTableAdapters.boltTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boltBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,36 +90,18 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "C";
             // 
-            // dbDataSet
-            // 
-            this.dbDataSet.DataSetName = "dbDataSet";
-            this.dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.boltBindingSource;
-            this.comboBox1.DisplayMember = "type";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(132, 20);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.ValueMember = "Код";
-            // 
-            // boltBindingSource
-            // 
-            this.boltBindingSource.DataMember = "bolt";
-            this.boltBindingSource.DataSource = this.dbDataSet;
-            // 
-            // boltTableAdapter
-            // 
-            this.boltTableAdapter.ClearBeforeFill = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boltBindingSource, "b", true));
             this.label6.Location = new System.Drawing.Point(132, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
@@ -137,7 +111,6 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boltBindingSource, "h", true));
             this.label7.Location = new System.Drawing.Point(132, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
@@ -147,7 +120,6 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boltBindingSource, "r", true));
             this.label8.Location = new System.Drawing.Point(132, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
@@ -157,7 +129,6 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boltBindingSource, "c", true));
             this.label9.Location = new System.Drawing.Point(132, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
@@ -173,31 +144,8 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "l";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(132, 163);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
             // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NX_Plugin.Properties.Resources.Снимок;
+            //
             this.pictureBox1.Location = new System.Drawing.Point(12, 189);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(420, 160);
@@ -219,7 +167,7 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(298, 136);
+            this.comboBox2.Location = new System.Drawing.Point(132, 157);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 27;
@@ -232,7 +180,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -247,10 +194,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Конструктор винта ГОСТ 1477-64";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boltBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,16 +206,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private dbDataSet dbDataSet;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource boltBindingSource;
-        private dbDataSetTableAdapters.boltTableAdapter boltTableAdapter;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox2;
