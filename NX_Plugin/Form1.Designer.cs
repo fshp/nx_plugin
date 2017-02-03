@@ -145,7 +145,10 @@
             this.label10.Text = "l";
             // 
             // pictureBox1
-            //
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::NX_Plugin.Resource1.preview1;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(12, 189);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(420, 160);
@@ -192,6 +195,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Конструктор винта ГОСТ 1477-64";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
