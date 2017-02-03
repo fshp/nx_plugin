@@ -199,14 +199,14 @@
             this.pictureBox1.Image = global::NX_Plugin.Properties.Resources.Снимок;
             this.pictureBox1.Location = new System.Drawing.Point(12, 189);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(420, 160);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(232, 367);
+            this.button1.Location = new System.Drawing.Point(357, 367);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 26;
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 402);
+            this.ClientSize = new System.Drawing.Size(444, 402);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.numericUpDown1);
