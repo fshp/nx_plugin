@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.screwBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbDataSet = new NX_Plugin.dbDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,7 +45,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.screwTableAdapter = new NX_Plugin.dbDataSetTableAdapters.screwTableAdapter();
+            this.screwscrew2lengthBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.screw2lengthTableAdapter = new NX_Plugin.dbDataSetTableAdapters.screw2lengthTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.screwBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screwscrew2lengthBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +101,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.screwBindingSource;
+            this.comboBox1.DisplayMember = "type";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(132, 20);
@@ -99,9 +110,20 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // screwBindingSource
+            // 
+            this.screwBindingSource.DataMember = "screw";
+            this.screwBindingSource.DataSource = this.dbDataSet;
+            // 
+            // dbDataSet
+            // 
+            this.dbDataSet.DataSetName = "dbDataSet";
+            this.dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "b", true));
             this.label6.Location = new System.Drawing.Point(132, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
@@ -111,6 +133,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "h", true));
             this.label7.Location = new System.Drawing.Point(132, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
@@ -120,6 +143,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "r", true));
             this.label8.Location = new System.Drawing.Point(132, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
@@ -129,6 +153,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screwBindingSource, "c", true));
             this.label9.Location = new System.Drawing.Point(132, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
@@ -168,18 +193,34 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.screwscrew2lengthBindingSource;
+            this.comboBox2.DisplayMember = "l";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(132, 157);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 27;
+            this.comboBox2.ValueMember = "l";
+            // 
+            // screwTableAdapter
+            // 
+            this.screwTableAdapter.ClearBeforeFill = true;
+            // 
+            // screwscrew2lengthBindingSource
+            // 
+            this.screwscrew2lengthBindingSource.DataMember = "screwscrew2length";
+            this.screwscrew2lengthBindingSource.DataSource = this.screwBindingSource;
+            // 
+            // screw2lengthTableAdapter
+            // 
+            this.screw2lengthTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 402);
+            this.ClientSize = new System.Drawing.Size(452, 410);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -198,7 +239,11 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Конструктор винта ГОСТ 1477-64";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.screwBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screwscrew2lengthBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +264,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private dbDataSet dbDataSet;
+        private System.Windows.Forms.BindingSource screwBindingSource;
+        private dbDataSetTableAdapters.screwTableAdapter screwTableAdapter;
+        private System.Windows.Forms.BindingSource screwscrew2lengthBindingSource;
+        private dbDataSetTableAdapters.screw2lengthTableAdapter screw2lengthTableAdapter;
     }
 }
